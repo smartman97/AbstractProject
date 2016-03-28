@@ -5,7 +5,7 @@ public abstract class VideoGame
 	//Three Data Members
 	private String gameName;
 	private int players;
-	private String publisher;
+	private String developer;
 	
 	public String getGameName()
 	{
@@ -15,9 +15,9 @@ public abstract class VideoGame
 	{
 		return players;
 	}
-	public String getPublisher()
+	public String getDeveloper()
 	{
-		return publisher;
+		return developer;
 	}
 	public void setGameName(String gameName)
 	{
@@ -27,9 +27,9 @@ public abstract class VideoGame
 	{
 		this.players = players;
 	}
-	public void setPublisher(String publisher)
+	public void setDeveloper(String developer)
 	{
-		this.publisher = publisher;
+		this.developer = developer;
 	}
 	
 	
