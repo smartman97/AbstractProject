@@ -1,6 +1,6 @@
 package myAbstract.model;
 
-public abstract class VideoGame
+public abstract class VideoGame implements InternetThings
 {
 	//Three Data Members
 	private String gameName;
