@@ -1,5 +1,11 @@
 package myAbstract.model;
 
+/**
+ * 
+ * @author Colm, Bodie, Jared
+ *
+ */
+
 public interface InternetThings
 {
 	public int cat();
