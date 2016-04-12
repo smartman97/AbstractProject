@@ -32,6 +32,9 @@ public class AbstractController
 		for(int i = 0; i < InternetThings.size(); i++)
 		{
 			InternetThings.get(i).troll(2);
+			InternetThings.get(i).meme();
+			InternetThings.get(i).clickBait(3);
+			InternetThings.get(i).cat();
 		}
 	}
 }

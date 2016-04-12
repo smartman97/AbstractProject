@@ -1,6 +1,6 @@
 package myAbstract.model;
 
-public abstract class VideoGame implements InternetThings
+public abstract class VideoGame implements InternetThings, Comparable
 {
 	//Three Data Members
 	private String gameName;
@@ -32,5 +32,40 @@ public abstract class VideoGame implements InternetThings
 		this.developer = developer;
 	}
 	
+	public String toString()
+	{
+		String description = "This is a " + this.getClass() + " and its meme is: " + meme(); 
+		
+		return description;
+	}
 	
+	/**
+	 * If the supplied variable compared comes before the calling variable return -1
+	 * If the supplied variable is after the calling variable return 1
+	 * Elseif they are the same, return 0
+	 * @param compared
+	 * @return
+	 */
+	public int compareTo(Object compared)
+	{
+		int comparedValue = Integer.MIN_VALUE;
+		
+		if(compared instanceof InternetThings)
+		{
+			if(this.cat() > ((InternetThings) compared).cat())
+			{
+				comparedValue = 1;
+			}
+			else if(this.cat() < ((InternetThings) compared).cat())
+			{
+				comparedValue = -1;
+			}
+			else
+			{
+				comparedValue = 0;
+			}
+		}
+		
+		return comparedValue;
+	}
 }
