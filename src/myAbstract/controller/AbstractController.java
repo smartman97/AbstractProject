@@ -1,11 +1,11 @@
 package myAbstract.controller;
 
 import java.util.ArrayList;
-
 import myAbstract.model.BicycleDardDeck;
 import myAbstract.model.CallofDuty;
 import myAbstract.model.InternetThings;
 import myAbstract.model.MountainDew;
+import myAbstract.view.Frame;
 
 public class AbstractController
 {
@@ -13,9 +13,11 @@ public class AbstractController
 	private CallofDuty cod;
 	private BicycleDardDeck card;
 	private MountainDew dew;
+	private Frame baseFrame;
 	
 	public AbstractController()
 	{
+		baseFrame = new Frame(this);
 		InternetThings = new ArrayList<InternetThings>();
 		
 		cod = new CallofDuty();
