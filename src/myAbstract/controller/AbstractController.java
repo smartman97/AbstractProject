@@ -59,4 +59,32 @@ public class AbstractController
 			}
 		}
 	}
+	
+	public void quickSort(int low, int high)
+	{
+		if(low < high)
+		{
+			int midPoint = partition(low, high);
+			quickSort(low, midPoint- 1);
+			quickSort(midPoint + 1, high);
+		}
+	}
+	
+	private int partition(int low, int high)
+	{
+		InternetThings pivot = internetThings.get(high);
+		int position = low;
+		
+		for(int spot = low; spot < high - 1; spot++)
+		{
+			if(internetThings.get(spot).compareTo(pivot) <= 0)
+			{
+				swap(position, spot);
+				position++;
+			}
+		}
+		swap(position, high);
+		
+		return position;
+	}
 }
