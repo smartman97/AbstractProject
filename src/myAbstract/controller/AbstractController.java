@@ -9,7 +9,7 @@ import myAbstract.view.Frame;
 
 public class AbstractController
 {
-	private ArrayList<InternetThings> InternetThings; 
+	private ArrayList<InternetThings> internetThings; 
 	private CallofDuty cod;
 	private BicycleDardDeck card;
 	private MountainDew dew;
@@ -18,25 +18,45 @@ public class AbstractController
 	public AbstractController()
 	{
 		baseFrame = new Frame(this);
-		InternetThings = new ArrayList<InternetThings>();
+		internetThings = new ArrayList<InternetThings>();
 		
 		cod = new CallofDuty();
 		card = new BicycleDardDeck();
 		dew = new MountainDew();
 		
-		InternetThings.add(cod);
-		InternetThings.add(card);
-		InternetThings.add(dew);
+		internetThings.add(cod);
+		internetThings.add(card);
+		internetThings.add(dew);
 	}
 	
 	public void start()
 	{
-		for(int i = 0; i < InternetThings.size(); i++)
+		for(int i = 0; i < internetThings.size(); i++)
 		{
-			InternetThings.get(i).troll(2);
-			InternetThings.get(i).meme();
-			InternetThings.get(i).clickBait(3);
-			InternetThings.get(i).cat();
+			internetThings.get(i).troll(2);
+			internetThings.get(i).meme();
+			internetThings.get(i).clickBait(3);
+			internetThings.get(i).cat();
+		}
+	}
+	
+	private void swap(int firstLocation, int secondLocation)
+	{
+		InternetThings temp = internetThings.get(firstLocation);
+		internetThings.set(firstLocation, internetThings.get(secondLocation));
+		internetThings.set(secondLocation, temp);
+	}
+	
+	public void insertionSort()
+	{
+		for(int outerLoop = 1; outerLoop < internetThings.size(); outerLoop++)
+		{
+			int innerLoop = outerLoop;
+			while(innerLoop > 0 && internetThings.get(innerLoop - 1).compareTo(internetThings.get(innerLoop)) > 0)
+			{
+				swap(innerLoop, innerLoop-1);
+				innerLoop--;
+			}
 		}
 	}
 }

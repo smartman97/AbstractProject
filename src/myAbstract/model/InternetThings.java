@@ -12,4 +12,5 @@ public interface InternetThings
 	public String meme();
 	public void troll(int troll);
 	public void clickBait(int hate);
+	public int compareTo(Object thing);
 }
