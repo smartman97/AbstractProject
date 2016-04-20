@@ -44,14 +44,6 @@ public class BicycleDardDeck extends Cards
 				"Click hear to know a trick that teachers hate!!! ");
 
 	}
-
-	public String toString()
-	{
-		String description = "This is a " + this.getClass()
-				+ " and its meme is: " + meme();
-
-		return description;
-	}
 	
 	/**
 	 * If the supplied variable compared comes before the calling variable return -1

@@ -1,6 +1,7 @@
 package myAbstract.controller;
 
 import java.util.ArrayList;
+
 import myAbstract.model.BicycleDardDeck;
 import myAbstract.model.CallofDuty;
 import myAbstract.model.InternetThings;
@@ -38,6 +39,28 @@ public class AbstractController
 			internetThings.get(i).clickBait(3);
 			internetThings.get(i).cat();
 		}
+	}
+	
+	public String showMemes()
+	{
+		String memeLevels = "";
+		for(InternetThings current: internetThings)
+		{
+			memeLevels += current.toString();
+		}
+		
+		return memeLevels;
+	}
+	
+	public String showCats()
+	{
+		String catLevels = "";
+		for(InternetThings current: internetThings)
+		{
+			catLevels += current.toString();
+		}
+		
+		return catLevels;
 	}
 	
 	private void swap(int firstLocation, int secondLocation)

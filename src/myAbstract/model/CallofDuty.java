@@ -13,7 +13,7 @@ public class CallofDuty extends VideoGame
 	
 	public int cat()
 	{
-		return 0;
+		return 1;
 	}
 	
 	public String meme()

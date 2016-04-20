@@ -51,13 +51,6 @@ public class MountainDew extends Soda
 		JOptionPane.showMessageDialog(null, "BUY IT OR SUFFER");
 	}
 	
-	public String toString()
-	{
-		String description = "This is a " + this.getClass() + " and its meme is: " + meme(); 
-		
-		return description;
-	}
-	
 	/**
 	 * If the supplied variable compared comes before the calling variable return -1
 	 * If the supplied variable is after the calling variable return 1

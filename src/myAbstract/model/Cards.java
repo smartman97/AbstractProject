@@ -42,10 +42,18 @@ public abstract class Cards implements InternetThings, Comparable
 			this.isItAGoodDeck = isItAGoodDeck;
 		}
 		
+//		public String toString()
+//		{
+//			String description = "This is a " + this.getClass() + " and its meme is: " + meme() + "\n"; 
+//			
+//			return description;
+//		}
+		
 		public String toString()
 		{
-			String description = "This is a " + this.getClass() + " and its meme is: " + meme(); 
-			
+			String description = "This is a " + this.getClass()
+					+ " and the number of cats it has is: " + cat() + "\n";
+
 			return description;
 		}
 		
